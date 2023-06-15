@@ -1,6 +1,6 @@
-import {Logo, InputBut} from './components/elements';
+import {Logo} from './components/Logo';
+import { InputBut } from './components/input';
 import './styles/index.css';
-
 
 
 const App = () => {
