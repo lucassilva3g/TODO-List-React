@@ -1,11 +1,14 @@
-import {Logo, Input, Button} from './components/elements';
+import {Logo, InputBut} from './components/elements';
+import './styles/index.css';
+
+
 
 const App = () => {
   return (
     <div>
       { <Logo /> }
-      { <Input /> }
-      { <Button />}
+      { <InputBut /> }
+
     </div>
   );
 };
