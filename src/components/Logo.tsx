@@ -1,11 +1,11 @@
-import Logi from "../assets/Logo.svg";
+import logo from "../assets/Logo.svg";
 
 const Logo = () => {
   return (
     <div>
       <img
-        src={Logi}
-        alt=""
+        src={logo}
+        alt="Logo da aplicação"
       />
     </div>
   );

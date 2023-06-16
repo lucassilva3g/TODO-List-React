@@ -1,6 +1,6 @@
 import {PlusCircle} from "@phosphor-icons/react";
 
-const InputBut = () => {
+const Input = () => {
   return (
     <div className="elem">
       <input type="text" placeholder="Adicione uma nova tarefa" />
@@ -10,4 +10,4 @@ const InputBut = () => {
 };
 
 
-export {InputBut};
+export {Input};
