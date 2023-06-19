@@ -16,3 +16,21 @@ img {
   align-items: center;
   gap: 0.5px;
 }
+
+.tarefas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-top: 50px;
+}
+
+.itens-lista {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 50px;
+}
