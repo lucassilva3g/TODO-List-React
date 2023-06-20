@@ -1,20 +1,23 @@
-import {Clipboard} from "@phosphor-icons/react";
-import styles from './Item.module.css'
+import {  Trash } from "@phosphor-icons/react";
+import styles from "./Item.module.css";
 
 
+interface ItemProps {
+  todo: string;
+  done: boolean;
+  onDelete: () => void;
+}
 
-const Item = () => {
-  if (Item.length === 0) {
-    return (
-      <div className={styles.itensLista}>
-        <p><Clipboard size={40} /></p>
-        <p>Você ainda não tem tarefas cadastradas</p>
-        <p>Crie tarefas e organize seus itens a fazer</p>
-      </div>
-    );
-  }
-
-  return <div>{}</div>;
+const Item = ({ todo, done, onDelete }: ItemProps) => {
+  return (
+    <div className={styles.item}>
+      {/* <Checkbox size={20} checked={done} /> */}
+      <span className={done ? styles.done : ""}>{todo}</span>
+      <Trash size={20} onClick={onDelete} />
+    </div>
+  );
 };
 
 export default Item;
+
+
