@@ -1,0 +1,7 @@
+.elem {
+  display: flex;
+ padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5px;
+}

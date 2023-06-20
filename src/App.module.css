@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(101, 109, 109);
+}
+
+.tarefas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-top: 50px;
+}
