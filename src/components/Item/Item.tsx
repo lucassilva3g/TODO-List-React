@@ -19,5 +19,3 @@ const Item = ({ todo, done, onDelete }: ItemProps) => {
 };
 
 export default Item;
-
-
