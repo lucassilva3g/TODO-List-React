@@ -1,4 +1,4 @@
-import {  Trash } from "@phosphor-icons/react";
+import { Trash } from "@phosphor-icons/react";
 import styles from "./Item.module.css";
 
 
@@ -18,4 +18,4 @@ const Item = ({ todo, done, onDelete }: ItemProps) => {
   );
 };
 
-export default Item;
+export  {Item};
