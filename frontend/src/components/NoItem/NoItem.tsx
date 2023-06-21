@@ -3,8 +3,8 @@ import styles from './NoItem.module.css'
 
 
 
-const Item = () => {
-  if (Item.length === 0) {
+const NoItem = () => {
+  if (NoItem.length === 0) {
     return (
       <div className={styles.itensLista}>
         <p><Clipboard size={40} /></p>
@@ -17,4 +17,4 @@ const Item = () => {
   return <div>{}</div>;
 };
 
-export default Item;
+export default NoItem;
