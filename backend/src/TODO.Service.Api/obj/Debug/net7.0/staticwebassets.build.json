@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "AyeVYyBTPF2cO+pn2SuARz1gN4UgPgtrlrsZaTnEdNg=",
-  "Source": "TODO-Service.Api",
-  "BasePath": "_content/TODO-Service.Api",
+  "Hash": "feHNoE7Yfd47VHVXhBla1How5N5bVLflXtG1cu1TvYY=",
+  "Source": "TODO.Service.Api",
+  "BasePath": "_content/TODO.Service.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

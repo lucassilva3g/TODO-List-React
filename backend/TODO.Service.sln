@@ -13,17 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DE85CEA4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{F5A63477-654E-4E0B-AD4A-01BBBB8D4343}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.Application", "src\TODO.Service.Application\TODO.Service.Application.csproj", "{ADCE4D9D-15F6-40AE-A07B-65057513EF06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Application", "src\TODO.Service.Application\TODO.Service.Application.csproj", "{ADCE4D9D-15F6-40AE-A07B-65057513EF06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{EA5E6891-2DB3-4A1F-B962-29EF0E8CAD7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.Domain", "src\TODO.Service.Domain\TODO.Service.Domain.csproj", "{8DEC87CA-C2BA-4968-9174-83855E4C9A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Domain", "src\TODO.Service.Domain\TODO.Service.Domain.csproj", "{8DEC87CA-C2BA-4968-9174-83855E4C9A91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infrastructure", "2 - Infrastructure", "{F58CBC5E-8BBA-485D-A361-0CBA85ED4177}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.CrossCutting", "src\TODO.Service.CrossCutting\TODO.Service.CrossCutting.csproj", "{FE950E37-5788-41D3-BDE2-2E70123FEF75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.CrossCutting", "src\TODO.Service.CrossCutting\TODO.Service.CrossCutting.csproj", "{FE950E37-5788-41D3-BDE2-2E70123FEF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.Persistence", "src\TODO.Service.Persistence\TODO.Service.Persistence.csproj", "{700AA666-8577-416F-ACE2-47F3E668C330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Persistence", "src\TODO.Service.Persistence\TODO.Service.Persistence.csproj", "{700AA666-8577-416F-ACE2-47F3E668C330}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,7 +36,6 @@ Global
 		{23B14B11-7313-43B4-8EFB-7A9B55A8C138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B14B11-7313-43B4-8EFB-7A9B55A8C138}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ADCE4D9D-15F6-40AE-A07B-65057513EF06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
