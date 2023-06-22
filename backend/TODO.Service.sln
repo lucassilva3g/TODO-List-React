@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4BBD25B-3F14-4BEB-A806-651ADFBFBFE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO-Service.Api", "src\TODO.Service.Api\TODO-Service.Api.csproj", "{23B14B11-7313-43B4-8EFB-7A9B55A8C138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Api", "src\TODO.Service.Api\TODO.Service.Api.csproj", "{23B14B11-7313-43B4-8EFB-7A9B55A8C138}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.UnitTest", "tests\TODO.Service.UnitTest\TODO.Service.UnitTest.csproj", "{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}"
 EndProject
