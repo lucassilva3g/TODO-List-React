@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODO.Service.UnitTest", "te
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DE85CEA4-87BF-4444-8EEE-AB56EF00429F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{F5A63477-654E-4E0B-AD4A-01BBBB8D4343}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{23B14B11-7313-43B4-8EFB-7A9B55A8C138} = {A4BBD25B-3F14-4BEB-A806-651ADFBFBFE0}
 		{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816} = {DE85CEA4-87BF-4444-8EEE-AB56EF00429F}
+		{F5A63477-654E-4E0B-AD4A-01BBBB8D4343} = {A4BBD25B-3F14-4BEB-A806-651ADFBFBFE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0157A625-3F77-45DE-A8DE-E029D65B1F32}
