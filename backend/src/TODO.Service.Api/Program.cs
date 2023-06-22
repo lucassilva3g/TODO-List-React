@@ -1,25 +1,121 @@
-var builder = WebApplication.CreateBuilder(args);
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using NLog;
+using NLog.Web;
+using System.Globalization;
+using TODO.Service.Api.Helpers;
+using TODO.Service.CrossCutting;
+using TODO.Service.Domain.Settings;
+using TODO.Service.Persistence;
 
-// Add services to the container.
+var logger = LogManager.Setup()
+    .LoadConfigurationFromAppSettings()
+    .GetCurrentClassLogger();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+logger.Debug("init main");
 
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    //EnvConstants.ValidateRequiredEnvs();
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddControllers(options =>
+    {
+        options.AddCustomFilters();
+    });
+
+    builder.Services.AddEndpointsApiExplorer();
+
+    builder.Services.Configure<ApiBehaviorOptions>(options =>
+    {
+        options.SuppressModelStateInvalidFilter = true;
+    });
+
+    // Add services to the container.
+    builder.Services
+        .InjectMapster()
+        .InjectDependencies()
+        .InjectLocalization()
+        .InjectFluentValidation()
+        .InjectDatabases()
+        .InjectMediatR();
+
+    builder.Services.AddCors();
+
+    builder.Services.AddSwagger();
+
+    builder.Services.Configure<RequestLocalizationOptions>(options =>
+    {
+        var supportedCultures = new[] { new CultureInfo("pt-br"), };
+
+        options.DefaultRequestCulture = new RequestCulture("pt-br");
+        options.SupportedCultures = supportedCultures;
+        options.SupportedUICultures = supportedCultures;
+    });
+
+    // NLog: Setup NLog for Dependency injection
+    builder.Logging.ClearProviders();
+    builder.Host.UseNLog(new NLogAspNetCoreOptions() { RemoveLoggerFactoryFilter = false });
+
+    var app = builder.Build();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.CustomUseSwagger();
+    }
+
+    app.UseHttpsRedirection();
+
+    app.UseCors(e =>
+        e.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
+    app.UseLoggerScope();
+
+    var requestlocalizationOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+
+    if (requestlocalizationOptions != null)
+        app.UseRequestLocalization(requestlocalizationOptions.Value);
+
+    app.MapControllers();
+
+    SeedDatabase(app);
+
+    app.Run();
+
+}
+catch (Exception exception)
+{
+    // NLog: catch setup errors
+    logger.Error(exception, "Stopped program because of exception");
+    throw;
+}
+finally
+{
+    // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
+    NLog.LogManager.Shutdown();
 }
 
-app.UseHttpsRedirection();
 
-app.UseAuthorization();
+void SeedDatabase(WebApplication host)
+{
 
-app.MapControllers();
+    using (var scope = host.Services.CreateScope())
+    {
+        try
+        {
+            logger.Debug("Seeding db...");
 
-app.Run();
+            var context = scope.ServiceProvider.GetService<CredMouraContext>();
+
+            TODOInitializer.Initialize(context);
+        }
+        catch (Exception ex)
+        {
+            logger.Error(ex, "Error on seed db...");
+        }
+    }
+}

@@ -1,6 +1,6 @@
 namespace TODO_List;
 
-public class WeatherForecast
+public class WeatherForecastViewModel
 {
     public DateOnly Date { get; set; }
 

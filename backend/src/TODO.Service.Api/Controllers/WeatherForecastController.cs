@@ -1,30 +1,23 @@
+using MediatR;
+using TODO.Service.Api.Controllers;
+using TODO.Service.Application.WeatherForecast.Queries.List;
+
 namespace TODO_List.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class WeatherForecastController : BaseController
 {
-    private static readonly string[] Summaries = new[]
+    public WeatherForecastController(IMediator mediator) : base(mediator)
     {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
-
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
-    {
-        _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+    [HttpGet]
+    [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(List<WeatherForecastViewModel>))]
+    [ProducesResponseType((int)HttpStatusCode.Unauthorized, Type = typeof(ProblemDetails))]
+    [ProducesResponseType((int)HttpStatusCode.InternalServerError, Type = typeof(ProblemDetails))]
+    public async Task<ActionResult<List<WeatherForecastViewModel>>> ListAll()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+        return Ok(await _mediator.Send(new ListWeatherForecastsQuery()));
     }
 }
