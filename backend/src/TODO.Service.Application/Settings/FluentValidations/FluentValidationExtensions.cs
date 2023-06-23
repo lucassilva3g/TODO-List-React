@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using TODO.Service.Domain.Utils;
+using Todo.Service.Domain.Utils;
 
-namespace TODO.Service.Application.Settings.FluentValidations;
+namespace Todo.Service.Application.Settings.FluentValidations;
 
 public static class FluentValidationExtensions
 {

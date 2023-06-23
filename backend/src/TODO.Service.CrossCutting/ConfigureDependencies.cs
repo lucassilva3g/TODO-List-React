@@ -1,9 +1,9 @@
 ﻿using MediatR;
-using TODO.Service.Application.Services.Interfaces;
-using TODO.Service.Application.Settings;
-using TODO.Service.Domain.Resources;
+using Todo.Service.Application.Services.Interfaces;
+using Todo.Service.Application.Settings;
+using Todo.Service.Domain.Resources;
 
-namespace TODO.Service.CrossCutting;
+namespace Todo.Service.CrossCutting;
 
 public static class ConfigureDependencies
 {

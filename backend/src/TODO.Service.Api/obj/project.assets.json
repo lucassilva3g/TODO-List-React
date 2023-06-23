@@ -1232,24 +1232,24 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "TODO.Service.Application/1.0.0": {
+      "Todo.Service.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "FluentValidation": "11.5.2",
           "Mapster": "7.3.0",
           "MediatR": "12.0.1",
-          "TODO.Service.Domain": "1.0.0",
-          "TODO.Service.Persistence": "1.0.0"
+          "Todo.Service.Domain": "1.0.0",
+          "Todo.Service.Persistence": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/TODO.Service.Application.dll": {}
+          "bin/placeholder/Todo.Service.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TODO.Service.Application.dll": {}
+          "bin/placeholder/Todo.Service.Application.dll": {}
         }
       },
-      "TODO.Service.CrossCutting/1.0.0": {
+      "Todo.Service.CrossCutting/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1257,43 +1257,43 @@
           "Microsoft.EntityFrameworkCore.Proxies": "7.0.7",
           "Microsoft.Extensions.Azure": "1.6.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.4",
-          "TODO.Service.Application": "1.0.0",
-          "TODO.Service.Domain": "1.0.0",
-          "TODO.Service.Persistence": "1.0.0"
+          "Todo.Service.Application": "1.0.0",
+          "Todo.Service.Domain": "1.0.0",
+          "Todo.Service.Persistence": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/TODO.Service.CrossCutting.dll": {}
+          "bin/placeholder/Todo.Service.CrossCutting.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TODO.Service.CrossCutting.dll": {}
+          "bin/placeholder/Todo.Service.CrossCutting.dll": {}
         }
       },
-      "TODO.Service.Domain/1.0.0": {
+      "Todo.Service.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.Extensions.Localization.Abstractions": "7.0.7"
         },
         "compile": {
-          "bin/placeholder/TODO.Service.Domain.dll": {}
+          "bin/placeholder/Todo.Service.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TODO.Service.Domain.dll": {}
+          "bin/placeholder/Todo.Service.Domain.dll": {}
         }
       },
-      "TODO.Service.Persistence/1.0.0": {
+      "Todo.Service.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.7",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.7",
-          "TODO.Service.Domain": "1.0.0"
+          "Todo.Service.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/TODO.Service.Persistence.dll": {}
+          "bin/placeholder/Todo.Service.Persistence.dll": {}
         },
         "runtime": {
-          "bin/placeholder/TODO.Service.Persistence.dll": {}
+          "bin/placeholder/Todo.Service.Persistence.dll": {}
         }
       }
     }
@@ -4320,35 +4320,35 @@
         "version.txt"
       ]
     },
-    "TODO.Service.Application/1.0.0": {
+    "Todo.Service.Application/1.0.0": {
       "type": "project",
-      "path": "../TODO.Service.Application/TODO.Service.Application.csproj",
-      "msbuildProject": "../TODO.Service.Application/TODO.Service.Application.csproj"
+      "path": "../Todo.Service.Application/Todo.Service.Application.csproj",
+      "msbuildProject": "../Todo.Service.Application/Todo.Service.Application.csproj"
     },
-    "TODO.Service.CrossCutting/1.0.0": {
+    "Todo.Service.CrossCutting/1.0.0": {
       "type": "project",
-      "path": "../TODO.Service.CrossCutting/TODO.Service.CrossCutting.csproj",
-      "msbuildProject": "../TODO.Service.CrossCutting/TODO.Service.CrossCutting.csproj"
+      "path": "../Todo.Service.CrossCutting/Todo.Service.CrossCutting.csproj",
+      "msbuildProject": "../Todo.Service.CrossCutting/Todo.Service.CrossCutting.csproj"
     },
-    "TODO.Service.Domain/1.0.0": {
+    "Todo.Service.Domain/1.0.0": {
       "type": "project",
-      "path": "../TODO.Service.Domain/TODO.Service.Domain.csproj",
-      "msbuildProject": "../TODO.Service.Domain/TODO.Service.Domain.csproj"
+      "path": "../Todo.Service.Domain/Todo.Service.Domain.csproj",
+      "msbuildProject": "../Todo.Service.Domain/Todo.Service.Domain.csproj"
     },
-    "TODO.Service.Persistence/1.0.0": {
+    "Todo.Service.Persistence/1.0.0": {
       "type": "project",
-      "path": "../TODO.Service.Persistence/TODO.Service.Persistence.csproj",
-      "msbuildProject": "../TODO.Service.Persistence/TODO.Service.Persistence.csproj"
+      "path": "../Todo.Service.Persistence/Todo.Service.Persistence.csproj",
+      "msbuildProject": "../Todo.Service.Persistence/Todo.Service.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "NLog.Web.AspNetCore >= 5.3.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "TODO.Service.Application >= 1.0.0",
-      "TODO.Service.CrossCutting >= 1.0.0",
-      "TODO.Service.Domain >= 1.0.0",
-      "TODO.Service.Persistence >= 1.0.0"
+      "Todo.Service.Application >= 1.0.0",
+      "Todo.Service.CrossCutting >= 1.0.0",
+      "Todo.Service.Domain >= 1.0.0",
+      "Todo.Service.Persistence >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4357,11 +4357,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Api\\TODO.Service.Api.csproj",
-      "projectName": "TODO.Service.Api",
-      "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Api\\TODO.Service.Api.csproj",
+      "projectUniqueName": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Api\\Todo.Service.Api.csproj",
+      "projectName": "Todo.Service.Api",
+      "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Api\\Todo.Service.Api.csproj",
       "packagesPath": "C:\\Users\\jean.miranda\\.nuget\\packages\\",
-      "outputPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Api\\obj\\",
+      "outputPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jean.miranda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4379,17 +4379,17 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Application\\TODO.Service.Application.csproj": {
-              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Application\\TODO.Service.Application.csproj"
+            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Application\\Todo.Service.Application.csproj": {
+              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Application\\Todo.Service.Application.csproj"
             },
-            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.CrossCutting\\TODO.Service.CrossCutting.csproj": {
-              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.CrossCutting\\TODO.Service.CrossCutting.csproj"
+            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.CrossCutting\\Todo.Service.CrossCutting.csproj": {
+              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.CrossCutting\\Todo.Service.CrossCutting.csproj"
             },
-            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Domain\\TODO.Service.Domain.csproj": {
-              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Domain\\TODO.Service.Domain.csproj"
+            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Domain\\Todo.Service.Domain.csproj": {
+              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Domain\\Todo.Service.Domain.csproj"
             },
-            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Persistence\\TODO.Service.Persistence.csproj": {
-              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Persistence\\TODO.Service.Persistence.csproj"
+            "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Persistence\\Todo.Service.Persistence.csproj": {
+              "projectPath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Persistence\\Todo.Service.Persistence.csproj"
             }
           }
         }

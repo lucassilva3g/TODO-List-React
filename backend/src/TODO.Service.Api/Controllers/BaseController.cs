@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace TODO.Service.Api.Controllers;
+namespace Todo.Service.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

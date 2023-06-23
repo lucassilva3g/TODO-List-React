@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TODO.Service.Domain\TODO.Service.Domain.csproj" />
-    <ProjectReference Include="..\TODO.Service.Persistence\TODO.Service.Persistence.csproj" />
+    <ProjectReference Include="..\Todo.Service.Domain\Todo.Service.Domain.csproj" />
+    <ProjectReference Include="..\Todo.Service.Persistence\Todo.Service.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

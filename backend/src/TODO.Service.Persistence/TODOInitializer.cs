@@ -1,20 +1,32 @@
-﻿namespace TODO.Service.Persistence;
+﻿namespace Todo.Service.Persistence;
 
-public class TODOInitializer
+public class TodoInitializer
 {
-    public static void Initialize(CredMouraContext context)
+    public static void Initialize(TodoContext context)
     {
-        var instance = new TODOInitializer();
+        var instance = new TodoInitializer();
         instance.Seed(context);
     }
 
-    private void Seed(CredMouraContext context)
+    private void Seed(TodoContext context)
     {
-        SeedDatabase(context);
+        SeedTodoItem(context);
     }
 
-    private void SeedDatabase(CredMouraContext context)
+    private void SeedTodoItem(TodoContext context)
     {
-        // TODO: Seed database
+        if (context.TodoItems.Any()) return;
+
+        var todoItem = new TodoItem
+        {
+            Id = Guid.NewGuid(),
+            Title = "Default Todo Item",
+            Description = "Default Todo Item Description",
+            IsDone = false
+        };
+
+        context.TodoItems.Add(todoItem);
+
+        context.SaveChanges();
     }
 }

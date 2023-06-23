@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Integrations;
+﻿namespace Todo.Service.Application.Integrations;
 
 public class MappingConfig : TypeAdapterConfig
 {

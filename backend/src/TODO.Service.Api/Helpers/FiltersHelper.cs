@@ -1,6 +1,6 @@
-﻿using TODO.Service.Api.Filters;
+﻿using Todo.Service.Api.Filters;
 
-namespace TODO.Service.Api.Helpers;
+namespace Todo.Service.Api.Helpers;
 
 public static class FiltersHelper
 {

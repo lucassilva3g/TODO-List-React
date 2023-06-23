@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 public class BaseValidationService : IBaseValidationService
 {
-    private readonly ICredMouraContext _context;
+    private readonly ITodoContext _context;
 
-    public BaseValidationService(ICredMouraContext context)
+    public BaseValidationService(ITodoContext context)
     {
         _context = context;
     }

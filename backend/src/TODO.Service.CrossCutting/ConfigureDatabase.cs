@@ -1,22 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TODO.Service.Domain.Settings;
-using TODO.Service.Persistence;
+using Todo.Service.Domain.Settings;
+using Todo.Service.Persistence;
 
-namespace TODO.Service.CrossCutting;
+namespace Todo.Service.CrossCutting;
 public static class ConfigureDatabase
 {
     public static IServiceCollection InjectDatabases(this IServiceCollection services)
     {
         var connString = EnvConstants.DATABASE_CONNECTION_STRING();
 
-        services.AddDbContext<CredMouraContext>(options =>
+        services.AddDbContext<TodoContext>(options =>
         {
             options
                 .UseLazyLoadingProxies()
                 .UseNpgsql(connString);
         });
 
-        services.AddScoped<ICredMouraContext>(provider => provider.GetService<CredMouraContext>());
+        services.AddScoped<ITodoContext>(provider => provider.GetService<TodoContext>());
 
         return services;
     }

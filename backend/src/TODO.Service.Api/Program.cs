@@ -3,10 +3,10 @@ using Microsoft.Extensions.Options;
 using NLog;
 using NLog.Web;
 using System.Globalization;
-using TODO.Service.Api.Helpers;
-using TODO.Service.CrossCutting;
-using TODO.Service.Domain.Settings;
-using TODO.Service.Persistence;
+using Todo.Service.Api.Helpers;
+using Todo.Service.CrossCutting;
+using Todo.Service.Domain.Settings;
+using Todo.Service.Persistence;
 
 var logger = LogManager.Setup()
     .LoadConfigurationFromAppSettings()
@@ -109,9 +109,9 @@ void SeedDatabase(WebApplication host)
         {
             logger.Debug("Seeding db...");
 
-            var context = scope.ServiceProvider.GetService<CredMouraContext>();
+            var context = scope.ServiceProvider.GetService<TodoContext>();
 
-            TODOInitializer.Initialize(context);
+            TodoInitializer.Initialize(context);
         }
         catch (Exception ex)
         {

@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Domain.Exceptions;
+﻿namespace Todo.Service.Domain.Exceptions;
 
 public class BusinessException : Exception
 {

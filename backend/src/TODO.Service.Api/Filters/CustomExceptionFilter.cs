@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using TODO.Service.Application.Settings.Exceptions;
-using TODO.Service.Domain.Exceptions;
-using TODO.Service.Domain.Resources;
+using Todo.Service.Application.Settings.Exceptions;
+using Todo.Service.Domain.Exceptions;
+using Todo.Service.Domain.Resources;
 
-namespace TODO.Service.Api.Filters;
+namespace Todo.Service.Api.Filters;
 
 
 public class CustomExceptionFilter : IExceptionFilter

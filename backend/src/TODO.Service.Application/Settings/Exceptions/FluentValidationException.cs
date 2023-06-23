@@ -1,6 +1,6 @@
 ﻿using FluentValidation.Results;
 
-namespace TODO.Service.Application.Settings.Exceptions;
+namespace Todo.Service.Application.Settings.Exceptions;
 
 public class FluentValidationException : Exception
 {

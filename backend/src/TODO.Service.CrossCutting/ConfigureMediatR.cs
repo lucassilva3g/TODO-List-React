@@ -4,10 +4,10 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TODO.Service.Application.WeatherForecast.Queries.List;
+using Todo.Service.Application.WeatherForecast.Queries.List;
 
 [assembly: ExcludeFromCodeCoverage]
-namespace TODO.Service.CrossCutting;
+namespace Todo.Service.CrossCutting;
 
 public static class ConfigureMediatR
 {

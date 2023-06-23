@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
-using TODO.Service.Domain.Exceptions;
+using Todo.Service.Domain.Exceptions;
 
-[assembly: InternalsVisibleTo("TODO.Service.UnitTest")]
-namespace TODO.Service.Domain.Settings;
+[assembly: InternalsVisibleTo("Todo.Service.UnitTest")]
+namespace Todo.Service.Domain.Settings;
 
 public static class EnvConstants
 {

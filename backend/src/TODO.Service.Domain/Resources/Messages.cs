@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Localization;
 using System.Reflection;
 
-namespace TODO.Service.Domain.Resources;
+namespace Todo.Service.Domain.Resources;
 
 public class Messages
 {

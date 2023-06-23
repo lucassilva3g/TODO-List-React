@@ -1,10 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
 [assembly: ExcludeFromCodeCoverage]
-namespace TODO.Service.Persistence;
+namespace Todo.Service.Persistence;
 
-
-public interface ICredMouraContext
+public interface ITodoContext
 {
     DbSet<TEntity> Set<TEntity>() where TEntity : class;
 

@@ -2,7 +2,7 @@
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace TODO.Service.Api.Helpers;
+namespace Todo.Service.Api.Helpers;
 
 public static class SwaggerHelper
 {
@@ -43,7 +43,7 @@ public static class SwaggerHelper
         options.SwaggerDoc("api", GetOpenApiInfo("api"));
     }
 
-    private static OpenApiInfo GetOpenApiInfo(string version, string title = "CredMoura Service - API")
+    private static OpenApiInfo GetOpenApiInfo(string version, string title = "Todo Service - API")
     {
         return new OpenApiInfo
         {
@@ -51,7 +51,7 @@ public static class SwaggerHelper
             Version = version,
             Contact = new OpenApiContact
             {
-                Name = "CredMoura Service",
+                Name = "Todo Service",
             }
         };
     }
@@ -67,6 +67,6 @@ public static class SwaggerHelper
 
     private static void AddSwaggerUIEndpoints(SwaggerUIOptions options)
     {
-        options.SwaggerEndpoint($"/swagger/api/swagger.json", "CredMoura Service - API");
+        options.SwaggerEndpoint($"/swagger/api/swagger.json", "Todo Service - API");
     }
 }

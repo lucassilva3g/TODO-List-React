@@ -5,25 +5,25 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4BBD25B-3F14-4BEB-A806-651ADFBFBFE0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Api", "src\TODO.Service.Api\TODO.Service.Api.csproj", "{23B14B11-7313-43B4-8EFB-7A9B55A8C138}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.Api", "src\Todo.Service.Api\Todo.Service.Api.csproj", "{23B14B11-7313-43B4-8EFB-7A9B55A8C138}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.UnitTest", "tests\TODO.Service.UnitTest\TODO.Service.UnitTest.csproj", "{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.UnitTest", "tests\Todo.Service.UnitTest\Todo.Service.UnitTest.csproj", "{AA24AB1D-8AAC-4F0F-B897-8EBD9E561816}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DE85CEA4-87BF-4444-8EEE-AB56EF00429F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{F5A63477-654E-4E0B-AD4A-01BBBB8D4343}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Application", "src\TODO.Service.Application\TODO.Service.Application.csproj", "{ADCE4D9D-15F6-40AE-A07B-65057513EF06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.Application", "src\Todo.Service.Application\Todo.Service.Application.csproj", "{ADCE4D9D-15F6-40AE-A07B-65057513EF06}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core", "1 - Core", "{EA5E6891-2DB3-4A1F-B962-29EF0E8CAD7F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Domain", "src\TODO.Service.Domain\TODO.Service.Domain.csproj", "{8DEC87CA-C2BA-4968-9174-83855E4C9A91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.Domain", "src\Todo.Service.Domain\Todo.Service.Domain.csproj", "{8DEC87CA-C2BA-4968-9174-83855E4C9A91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infrastructure", "2 - Infrastructure", "{F58CBC5E-8BBA-485D-A361-0CBA85ED4177}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.CrossCutting", "src\TODO.Service.CrossCutting\TODO.Service.CrossCutting.csproj", "{FE950E37-5788-41D3-BDE2-2E70123FEF75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.CrossCutting", "src\Todo.Service.CrossCutting\Todo.Service.CrossCutting.csproj", "{FE950E37-5788-41D3-BDE2-2E70123FEF75}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TODO.Service.Persistence", "src\TODO.Service.Persistence\TODO.Service.Persistence.csproj", "{700AA666-8577-416F-ACE2-47F3E668C330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Todo.Service.Persistence", "src\Todo.Service.Persistence\Todo.Service.Persistence.csproj", "{700AA666-8577-416F-ACE2-47F3E668C330}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

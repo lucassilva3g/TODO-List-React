@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TODO_List;
+using Todo_List;
 
-namespace TODO.Service.Application.WeatherForecast.Queries.List;
+namespace Todo.Service.Application.WeatherForecast.Queries.List;
 
 public class ListWeatherForecastsQuery : IRequest<List<WeatherForecastViewModel>> { }
 
@@ -17,9 +17,9 @@ public class ListWeatherForecastsQueryHandler : IRequestHandler<ListWeatherForec
     };
 
 
-    public readonly ICredMouraContext _context;
+    public readonly ITodoContext _context;
 
-    public ListWeatherForecastsQueryHandler(ICredMouraContext context)
+    public ListWeatherForecastsQueryHandler(ITodoContext context)
     {
         _context = context;
     }

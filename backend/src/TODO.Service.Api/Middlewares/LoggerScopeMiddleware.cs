@@ -1,7 +1,7 @@
 ﻿
-using TODO.Service.Domain.Utils;
+using Todo.Service.Domain.Utils;
 
-namespace TODO.Service.Api.Middlewares;
+namespace Todo.Service.Api.Middlewares;
 
 public class LoggerScopeMiddleware
 {

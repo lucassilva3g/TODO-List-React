@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Models.Dtos;
+﻿namespace Todo.Service.Application.Models.Dtos;
 
 public class OrdinationDto
 {

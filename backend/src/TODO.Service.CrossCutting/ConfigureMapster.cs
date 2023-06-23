@@ -1,6 +1,6 @@
-﻿using TODO.Service.Application.Integrations;
+﻿using Todo.Service.Application.Integrations;
 
-namespace TODO.Service.CrossCutting;
+namespace Todo.Service.CrossCutting;
 
 public static class ConfigureMapster
 {

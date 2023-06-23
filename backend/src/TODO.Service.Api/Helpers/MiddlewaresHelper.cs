@@ -1,6 +1,6 @@
-﻿using TODO.Service.Api.Middlewares;
+﻿using Todo.Service.Api.Middlewares;
 
-namespace TODO.Service.Api.Helpers;
+namespace Todo.Service.Api.Helpers;
 
 public static class MiddlewaresHelper
 {

@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Domain.Utils;
+﻿namespace Todo.Service.Domain.Utils;
 
 public static class Constants
 {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace TODO.Service.Api.Filters;
+namespace Todo.Service.Api.Filters;
 
 public class ActionLogFilter : IActionFilter
 {

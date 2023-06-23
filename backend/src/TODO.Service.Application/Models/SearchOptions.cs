@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Models;
+﻿namespace Todo.Service.Application.Models;
 public struct SearchOptions
 {
     public SearchOptions(int maxLimit, List<string> orderBy)

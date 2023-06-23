@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.CrossCutting;
+﻿namespace Todo.Service.CrossCutting;
 
 public static class ConfigureFluentValidation
 {

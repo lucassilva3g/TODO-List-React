@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TODO.Service.Application.Services.Interfaces;
+namespace Todo.Service.Application.Services.Interfaces;
 
 public interface IBaseValidationService
 {

@@ -1,19 +1,21 @@
-﻿using TODO.Service.Domain.Entities.General;
+﻿using Todo.Service.Domain.Entities.General;
 
-namespace TODO.Service.Persistence;
+namespace Todo.Service.Persistence;
 
-public class CredMouraContext : DbContext, ICredMouraContext
+public class TodoContext : DbContext, ITodoContext
 {
-    public CredMouraContext(DbContextOptions<CredMouraContext> options)
+    public TodoContext(DbContextOptions<TodoContext> options)
         : base(options)
     {
         AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 
+    public virtual DbSet<TodoItem> TodoItems { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(TODOInitializer).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(TodoInitializer).Assembly);
 
         // Lower Table Names
         modelBuilder.Model.GetEntityTypes()
@@ -44,10 +46,10 @@ public class CredMouraContext : DbContext, ICredMouraContext
     private void SetDateOnEntities()
     {
         var entries = ChangeTracker
-       .Entries()
-       .Where(e => e.Entity is ETracker && (
-               e.State == EntityState.Added
-               || e.State == EntityState.Modified));
+           .Entries()
+           .Where(e => e.Entity is ETracker && (
+                   e.State == EntityState.Added
+                   || e.State == EntityState.Modified));
 
         foreach (var entityEntry in entries)
         {

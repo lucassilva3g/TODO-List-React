@@ -1,2 +1,2 @@
 ﻿global using Microsoft.EntityFrameworkCore;
-global using TODO.Service.Domain.Entities;
+global using Todo.Service.Domain.Entities;

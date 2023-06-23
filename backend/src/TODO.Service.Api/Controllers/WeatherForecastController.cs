@@ -1,8 +1,8 @@
 using MediatR;
-using TODO.Service.Api.Controllers;
-using TODO.Service.Application.WeatherForecast.Queries.List;
+using Todo.Service.Api.Controllers;
+using Todo.Service.Application.WeatherForecast.Queries.List;
 
-namespace TODO_List.Controllers;
+namespace Todo_List.Controllers;
 
 [ApiController]
 [Route("[controller]")]

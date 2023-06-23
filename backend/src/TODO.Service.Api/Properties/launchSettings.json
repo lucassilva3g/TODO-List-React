@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "TODO.Service.Api": {
+    "Todo.Service.Api": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

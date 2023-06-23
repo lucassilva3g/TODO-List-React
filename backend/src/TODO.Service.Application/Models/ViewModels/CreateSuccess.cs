@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Models.ViewModels;
+﻿namespace Todo.Service.Application.Models.ViewModels;
 
 public class CreateSuccess
 {

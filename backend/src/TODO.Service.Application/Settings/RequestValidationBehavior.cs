@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace TODO.Service.Application.Settings;
+namespace Todo.Service.Application.Settings;
 
 public class RequestValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
 {

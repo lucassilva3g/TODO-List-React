@@ -11,11 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TODO.Service.Domain\TODO.Service.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="EntityConfigurations\" />
+    <ProjectReference Include="..\Todo.Service.Domain\Todo.Service.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TODO.Service.Application.Settings;
+namespace Todo.Service.Application.Settings;
 
 public class LoggerBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
 {

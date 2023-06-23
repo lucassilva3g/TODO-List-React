@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Settings.FluentValidations;
+﻿namespace Todo.Service.Application.Settings.FluentValidations;
 
 public static class FluentValidationErrorCode
 {

@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Domain.Entities.General;
+﻿namespace Todo.Service.Domain.Entities.General;
 
 public abstract class SimpleDbEntity : DbEntity
 {

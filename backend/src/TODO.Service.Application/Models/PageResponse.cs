@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Application.Models;
+﻿namespace Todo.Service.Application.Models;
 public class PageResponse<T>
 {
     public List<T> Content { get; set; }

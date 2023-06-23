@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oDZFcnruD8JJDhOZntGhaB5aY/OPVTK9Xt6jcPv3SmcbsSuGmUS7XksAwsI3oroODCgL/sGM96VXaaEWmdjqaw==",
+  "dgSpecHash": "vHMuATT2iyiVG5OwhtJgg3v9ymZwA8pHcD/P6TBU9b5Gyjjqak3xK/rGsPECD4PjL6J0Sz63YtpvvQ6F29ct5g==",
   "success": true,
-  "projectFilePath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\TODO.Service.Api\\TODO.Service.Api.csproj",
+  "projectFilePath": "C:\\WS\\jeny3g\\TODO-List-React\\backend\\src\\Todo.Service.Api\\Todo.Service.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jean.miranda\\.nuget\\packages\\azure.core\\1.30.0\\azure.core.1.30.0.nupkg.sha512",
     "C:\\Users\\jean.miranda\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

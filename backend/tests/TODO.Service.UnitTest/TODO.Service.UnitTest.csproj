@@ -35,9 +35,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TODO.Service.Application\TODO.Service.Application.csproj" />
-    <ProjectReference Include="..\..\src\TODO.Service.Domain\TODO.Service.Domain.csproj" />
-    <ProjectReference Include="..\..\src\TODO.Service.Persistence\TODO.Service.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\Todo.Service.Application\Todo.Service.Application.csproj" />
+    <ProjectReference Include="..\..\src\Todo.Service.Domain\Todo.Service.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Todo.Service.Persistence\Todo.Service.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Services\" />
+    <Folder Include="Application\TodoItems\Commands\Create\" />
+    <Folder Include="Application\TodoItems\Commands\Delete\" />
+    <Folder Include="Application\TodoItems\Commands\Edit\" />
+    <Folder Include="Application\TodoItems\Queries\Get\" />
+    <Folder Include="_Builders\Queries\" />
   </ItemGroup>
 
 </Project>

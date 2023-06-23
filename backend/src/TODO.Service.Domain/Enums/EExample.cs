@@ -1,4 +1,4 @@
-﻿namespace TODO.Service.Domain.Enums;
+﻿namespace Todo.Service.Domain.Enums;
 
 public enum EExample
 {
