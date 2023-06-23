@@ -102,20 +102,17 @@ finally
 
 void SeedDatabase(WebApplication host)
 {
-
-    using (var scope = host.Services.CreateScope())
+    using var scope = host.Services.CreateScope();
+    try
     {
-        try
-        {
-            logger.Debug("Seeding db...");
+        logger.Debug("Seeding db...");
 
-            var context = scope.ServiceProvider.GetService<TodoContext>();
+        var context = scope.ServiceProvider.GetService<TodoContext>();
 
-            TodoInitializer.Initialize(context);
-        }
-        catch (Exception ex)
-        {
-            logger.Error(ex, "Error on seed db...");
-        }
+        TodoInitializer.Initialize(context);
+    }
+    catch (Exception ex)
+    {
+        logger.Error(ex, "Error on seed db...");
     }
 }
