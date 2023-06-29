@@ -2,7 +2,7 @@ import { Clipboard } from "@phosphor-icons/react";
 import styles from "./NoItem.module.css";
 
 const NoItem = () => {
-  if (NoItem.length === 0) {
+
     return (
       <div className={styles.itensLista}>
         <p>
@@ -12,9 +12,9 @@ const NoItem = () => {
         <p>Crie tarefas e organize seus itens a fazer</p>
       </div>
     );
-  }
 
-  return <div>{}</div>;
+
+
 };
 
-export default NoItem;
+export {NoItem};

@@ -1,4 +1,4 @@
-import {  Trash } from "@phosphor-icons/react";
+import { Trash } from "@phosphor-icons/react";
 import styles from "./Item.module.css";
 
 
@@ -13,9 +13,10 @@ const Item = ({ todo, done, onDelete }: ItemProps) => {
     <div className={styles.item}>
       {/* <Checkbox size={20} checked={done} /> */}
       <span className={done ? styles.done : ""}>{todo}</span>
+
       <Trash size={20} onClick={onDelete} />
     </div>
   );
 };
 
-export default Item;
+export  {Item};

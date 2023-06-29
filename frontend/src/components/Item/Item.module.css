@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #494747;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px;
+  background-color: #494747;
+}

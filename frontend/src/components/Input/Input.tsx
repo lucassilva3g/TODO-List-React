@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import { ChangeEvent } from "react";
 import { PlusCircle } from "@phosphor-icons/react";
 import styles from "./Input.module.css";
 
-const Input = () => {
-  const [newTask, setNewTask] = useState("");
+interface InputProps {
+  onCreatNewTask: () => void;
+  onInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  taskValue: string;
+  isButtonDisabled: boolean;
+}
 
-const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setNewTask(event.target.value);
-  };
-
-  const handleCreateNewTask = () => {
-    alert(newTask)
-    setNewTask("");
+const Input = ({ onCreatNewTask, onInputChange, taskValue, isButtonDisabled}: InputProps) => {
+  const handleClick = () => {
+    if (taskValue.trim() !== "") {
+      onCreatNewTask();
+    }
   };
 
   return (
@@ -19,13 +21,12 @@ const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       <input
         type="text"
         placeholder="Adicione uma nova tarefa"
-        value={newTask}
-        onChange={handleInputChange}
+        value={taskValue}
+        onChange={onInputChange}
       />
-      <button onClick={handleCreateNewTask}>
+        <button disabled={isButtonDisabled} onClick={handleClick}>
         Criar <PlusCircle size={11} />
       </button>
-
     </div>
   );
 };
