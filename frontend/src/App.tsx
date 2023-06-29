@@ -11,12 +11,15 @@ interface Task {
   isComplete: boolean;
 }
 
+
+
 const App = () => {
   const [newTask, setNewTask] = useState("");
   const [tasks, setTasks] = useState<Task[]>([]);
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(event.target.value);
   };
+
 
   const handleCreateNewTask = () => {
     const task = {
@@ -33,10 +36,12 @@ const App = () => {
     <div>
       <Logo />
       <Input
-        onCreatNewTask={handleCreateNewTask}
-        onInputChange={handleInputChange}
-        taskValue={newTask}
-      />
+         onCreatNewTask={handleCreateNewTask}
+         onInputChange={handleInputChange}
+         taskValue={newTask}
+         isButtonDisabled={!newTask.length}
+       />
+
       <div className={styles.tarefas}>
         <p className={styles.tarefa}>Tarefas criadas: {tasks.length}</p>
         <p className={styles.tarefa}>Tarefas concluídas: 0</p>
