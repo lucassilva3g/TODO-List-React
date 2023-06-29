@@ -3,7 +3,7 @@ import { Input } from "./components/Input/Input";
 import { NoItem } from "./components/NoItem/NoItem";
 import styles from "./App.module.css";
 import { useState } from "react";
-import {Item} from "./components/Item/Item";
+import { Item } from "./components/Item/Item";
 
 interface Task {
   id: number;
@@ -38,26 +38,24 @@ const App = () => {
         taskValue={newTask}
       />
       <div className={styles.tarefas}>
-        <p className={styles.tarefa}>Tarefas criadas: 0</p>
+        <p className={styles.tarefa}>Tarefas criadas: {tasks.length}</p>
         <p className={styles.tarefa}>Tarefas concluídas: 0</p>
       </div>
-      {/* <NoItem /> */}
+
       {tasks.length === 0 ? (
         <NoItem />
       ) : (
         <div>
           {tasks.map((task) => (
             <Item
-            done={task.isComplete}
-            todo={task.name}
-            onDelete={() => console.log("deletar")}
+              done={task.isComplete}
+              todo={task.name}
+              onDelete={() => console.log("deletar")}
             />
-
           ))}
-          </div>
+        </div>
       )}
     </div>
-
   );
 };
 

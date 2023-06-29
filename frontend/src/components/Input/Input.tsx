@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { PlusCircle } from "@phosphor-icons/react";
 import styles from "./Input.module.css";
 
@@ -7,8 +6,13 @@ interface InputProps {
   onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   taskValue: string;
 }
-const Input = ({onCreatNewTask, onInputChange, taskValue}:InputProps) => {
 
+const Input = ({ onCreatNewTask, onInputChange, taskValue }: InputProps) => {
+  const handleClick = () => {
+    if (taskValue.trim() !== "") {
+      onCreatNewTask();
+    }
+  };
 
   return (
     <div className={styles.elem}>
@@ -18,10 +22,9 @@ const Input = ({onCreatNewTask, onInputChange, taskValue}:InputProps) => {
         value={taskValue}
         onChange={onInputChange}
       />
-      <button onClick={onCreatNewTask}>
+      <button onClick={handleClick}>
         Criar <PlusCircle size={11} />
       </button>
-
     </div>
   );
 };
