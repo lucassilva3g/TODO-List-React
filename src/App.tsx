@@ -55,7 +55,9 @@ const App = () => {
             <Item
               done={task.isComplete}
               todo={task.name}
-              onDelete={() => console.log("deletar")}
+              onDelete={() =>
+                setTasks(tasks.filter((taskItem) => taskItem.id !== task.id))
+              }
             />
           ))}
         </div>
