@@ -1,4 +1,5 @@
-import { Trash } from "@phosphor-icons/react";
+import React, { useState } from 'react';
+import { Circle, Trash } from "@phosphor-icons/react";
 import styles from "./Item.module.css";
 
 
@@ -9,12 +10,15 @@ interface ItemProps {
 }
 
 const Item = ({ todo, done, onDelete }: ItemProps) => {
+
+
   return (
     <div className={styles.item}>
-      {/* <Checkbox size={20} checked={done} /> */}
+      <Circle className={styles.circle} size={17} weight="fill"/>
       <span className={done ? styles.done : ""}>{todo}</span>
 
-      <Trash size={20} onClick={onDelete} />
+      <Trash className={styles.trash} size={20} onClick={onDelete} />
+
     </div>
   );
 };

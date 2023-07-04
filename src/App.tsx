@@ -21,6 +21,11 @@ const App = () => {
   };
 
 
+  const handleDelete = (taskId: number) => {
+    setTasks(tasks.filter((taskItem) => taskItem.id !== taskId));
+  };
+
+
   const handleCreateNewTask = () => {
     const task = {
       id: Math.random(),
@@ -55,7 +60,9 @@ const App = () => {
             <Item
               done={task.isComplete}
               todo={task.name}
-              onDelete={() => console.log("deletar")}
+              onDelete={() =>
+                handleDelete(task.id)
+              }
             />
           ))}
         </div>

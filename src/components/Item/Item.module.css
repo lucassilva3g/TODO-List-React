@@ -5,6 +5,28 @@
   border: 1px solid #494747;
   border-radius: 5px;
   padding: 20px;
-  margin: 30px;
+  margin: 0 auto 30px;
   background-color: #494747;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.done {
+}
+
+.trash:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.circle {
+  border-radius: 50%;
+  border: 1px solid rgb(116, 116, 245);
+  color: #494747;
+}
+
+.circle:hover {
+  cursor: pointer;
+  color: #9443c4;
+  border-color: #591b7e;
 }
