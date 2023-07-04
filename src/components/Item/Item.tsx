@@ -10,9 +10,6 @@ interface ItemProps {
 }
 
 const Item = ({ todo, done, onDelete }: ItemProps) => {
- const handleDelete = () => {
-    onDelete();
-  };
 
 
   return (
@@ -20,7 +17,7 @@ const Item = ({ todo, done, onDelete }: ItemProps) => {
       <Circle className={styles.circle} size={17} weight="fill"/>
       <span className={done ? styles.done : ""}>{todo}</span>
 
-      <Trash className={styles.trash} size={20} onClick={handleDelete} />
+      <Trash className={styles.trash} size={20} onClick={onDelete} />
 
     </div>
   );
