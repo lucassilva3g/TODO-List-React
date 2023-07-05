@@ -5,6 +5,18 @@
   justify-content: center;
   gap: 10px;
   padding-top: 50px;
+  color: #fff;
+  ;
 }
 
+.semTarefas {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #808080;
+}
 
+.crie {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #808080;
+}

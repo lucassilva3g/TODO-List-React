@@ -15,7 +15,7 @@ const App = () => {
   const [newTask, setNewTask] = useState("");
   const [tasks, setTasks] = useState<Task[]>([]);
 
-const tasksDone = tasks.filter((task) => task.isComplete).length;
+  const tasksDone = tasks.filter((task) => task.isComplete).length;
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(event.target.value);
@@ -46,17 +46,22 @@ const tasksDone = tasks.filter((task) => task.isComplete).length;
 
   return (
     <div>
-      <Logo />
-      <Input
-        onCreatNewTask={handleCreateNewTask}
-        onInputChange={handleInputChange}
-        taskValue={newTask}
-        isButtonDisabled={!newTask.length}
-      />
+      <div className={styles.header}>
+        <Logo />
+        <Input
+          onCreatNewTask={handleCreateNewTask}
+          onInputChange={handleInputChange}
+          taskValue={newTask}
+          isButtonDisabled={!newTask.length}
+        />
+      </div>
 
       <div className={styles.tarefas}>
-        <p className={styles.tarefa}>Tarefas criadas: {tasks.length}</p>
-        <p className={styles.tarefa}>Tarefas concluídas: {tasksDone} de {tasks.length} </p>
+        <p className={styles.tarefa1}>Tarefas criadas: {tasks.length}</p>
+        <p className={styles.tarefa2}>
+          Tarefas concluídas:{" "}
+          {tasksDone > 0 ? `${tasksDone} de ${tasks.length}` : "0"}
+        </p>
       </div>
 
       {tasks.length === 0 ? (
