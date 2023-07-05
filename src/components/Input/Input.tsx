@@ -9,7 +9,12 @@ interface InputProps {
   isButtonDisabled: boolean;
 }
 
-const Input = ({ onCreatNewTask, onInputChange, taskValue, isButtonDisabled}: InputProps) => {
+const Input = ({
+  onCreatNewTask,
+  onInputChange,
+  taskValue,
+  isButtonDisabled,
+}: InputProps) => {
   const handleClick = () => {
     if (taskValue.trim() !== "") {
       onCreatNewTask();
@@ -18,13 +23,13 @@ const Input = ({ onCreatNewTask, onInputChange, taskValue, isButtonDisabled}: In
 
   return (
     <div className={styles.elem}>
-      <input
+      <input className={styles.addTask}
         type="text"
         placeholder="Adicione uma nova tarefa"
         value={taskValue}
         onChange={onInputChange}
       />
-        <button disabled={isButtonDisabled} onClick={handleClick}>
+      <button className={styles.buttonCreate} disabled={isButtonDisabled} onClick={handleClick}>
         Criar <PlusCircle size={11} />
       </button>
     </div>
