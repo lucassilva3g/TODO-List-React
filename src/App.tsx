@@ -11,20 +11,27 @@ interface Task {
   isComplete: boolean;
 }
 
-
-
 const App = () => {
   const [newTask, setNewTask] = useState("");
   const [tasks, setTasks] = useState<Task[]>([]);
+
+
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(event.target.value);
   };
-
 
   const handleDelete = (taskId: number) => {
     setTasks(tasks.filter((taskItem) => taskItem.id !== taskId));
   };
 
+  const handleToggle = (taskId: number) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId ? { ...task, isComplete: !task.isComplete } : task
+      )
+    );
+  };
 
   const handleCreateNewTask = () => {
     const task = {
@@ -33,23 +40,23 @@ const App = () => {
       isComplete: false,
     };
     const newTasks = [...tasks, task];
-    console.log(newTasks);
     setTasks(newTasks);
     setNewTask("");
   };
+
   return (
     <div>
       <Logo />
       <Input
-         onCreatNewTask={handleCreateNewTask}
-         onInputChange={handleInputChange}
-         taskValue={newTask}
-         isButtonDisabled={!newTask.length}
-       />
+        onCreatNewTask={handleCreateNewTask}
+        onInputChange={handleInputChange}
+        taskValue={newTask}
+        isButtonDisabled={!newTask.length}
+      />
 
       <div className={styles.tarefas}>
         <p className={styles.tarefa}>Tarefas criadas: {tasks.length}</p>
-        <p className={styles.tarefa}>Tarefas concluídas: 0</p>
+        <p className={styles.tarefa}>Tarefas concluídas: </p>
       </div>
 
       {tasks.length === 0 ? (
@@ -58,11 +65,11 @@ const App = () => {
         <div>
           {tasks.map((task) => (
             <Item
+              key={task.id}
               done={task.isComplete}
               todo={task.name}
-              onDelete={() =>
-                handleDelete(task.id)
-              }
+              onDelete={() => handleDelete(task.id)}
+              onToggle={() => handleToggle(task.id)}
             />
           ))}
         </div>
