@@ -5,13 +5,13 @@ interface ItemProps {
   todo: string;
   done: boolean;
   onDelete: () => void;
-  onToggle: () => void;
+  onDone: () => void;
 }
 
-const Item = ({ todo, done, onDelete, onToggle }: ItemProps) => {
+const Item = ({ todo, done, onDelete, onDone }: ItemProps) => {
   return (
     <div className={styles.item}>
-      <input type="checkbox" onClick={onToggle} />
+      <input type="checkbox" onClick={onDone} />
       <span className={done ? styles.done : ""}>{todo}</span>
       <Trash className={styles.trash} size={20} onClick={onDelete} />
     </div>

@@ -15,7 +15,7 @@ const App = () => {
   const [newTask, setNewTask] = useState("");
   const [tasks, setTasks] = useState<Task[]>([]);
 
-
+const tasksDone = tasks.filter((task) => task.isComplete).length;
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewTask(event.target.value);
@@ -25,7 +25,7 @@ const App = () => {
     setTasks(tasks.filter((taskItem) => taskItem.id !== taskId));
   };
 
-  const handleToggle = (taskId: number) => {
+  const handleDone = (taskId: number) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
         task.id === taskId ? { ...task, isComplete: !task.isComplete } : task
@@ -56,7 +56,7 @@ const App = () => {
 
       <div className={styles.tarefas}>
         <p className={styles.tarefa}>Tarefas criadas: {tasks.length}</p>
-        <p className={styles.tarefa}>Tarefas concluídas: </p>
+        <p className={styles.tarefa}>Tarefas concluídas: {tasksDone} de {tasks.length} </p>
       </div>
 
       {tasks.length === 0 ? (
@@ -69,7 +69,7 @@ const App = () => {
               done={task.isComplete}
               todo={task.name}
               onDelete={() => handleDelete(task.id)}
-              onToggle={() => handleToggle(task.id)}
+              onDone={() => handleDone(task.id)}
             />
           ))}
         </div>
