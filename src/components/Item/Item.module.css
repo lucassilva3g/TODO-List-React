@@ -1,4 +1,3 @@
-
 .item {
   display: flex;
   justify-content: space-evenly;
@@ -11,6 +10,11 @@
   justify-content: space-between;
   width: 50%;
   word-break: break-all;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
 }
 
 .done {
@@ -19,7 +23,13 @@
 
 }
 
+
 .trash:hover {
   cursor: pointer;
+  color: #fff
+}
+
+p {
   color: #fff;
+  margin: 0;
 }
