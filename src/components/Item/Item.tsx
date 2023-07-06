@@ -11,12 +11,18 @@ interface ItemProps {
 const Item = ({ todo, done, onDelete, onDone }: ItemProps) => {
   return (
     <div className={styles.item}>
+      <div>
       <label>
         <input type="checkbox" onClick={onDone} className={styles.checkbox} />
         <span></span>
       </label>
-      <span className={done ? styles.done : ""}>{todo}</span>
+      </div>
+      <div>
+      <p className={done ? styles.done : ""}>{todo}</p>
+      </div>
+      <div>
       <Trash className={styles.trash} size={20} onClick={onDelete} />
+    </div>
     </div>
   );
 };

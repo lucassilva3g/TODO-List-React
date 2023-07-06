@@ -10,6 +10,7 @@
   justify-content: space-between;
   width: 50%;
   word-break: break-all;
+  align-items: center;
 }
 
 .checkbox {
@@ -19,13 +20,16 @@
 .done {
   text-decoration: line-through;
   color: #6b6868;
+
 }
+
 
 .trash:hover {
   cursor: pointer;
-  color: #fff;
+  color: #fff
 }
 
-span {
+p {
   color: #fff;
+  margin: 0;
 }

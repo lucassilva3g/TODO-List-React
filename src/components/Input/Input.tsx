@@ -15,24 +15,28 @@ const Input = ({
   taskValue,
   isButtonDisabled,
 }: InputProps) => {
-  const handleClick = () => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (taskValue.trim() !== "") {
       onCreatNewTask();
     }
   };
 
   return (
-    <div className={styles.elem}>
-      <input className={styles.addTask}
-        type="text"
-        placeholder="Adicione uma nova tarefa"
-        value={taskValue}
-        onChange={onInputChange}
-      />
-      <button className={styles.buttonCreate} disabled={isButtonDisabled} onClick={handleClick}>
-        Criar <PlusCircle size={11} />
-      </button>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <div className={styles.elem}>
+        <input
+          className={styles.addTask}
+          type="text"
+          placeholder="Adicione uma nova tarefa"
+          value={taskValue}
+          onChange={onInputChange}
+        />
+        <button className={styles.buttonCreate} disabled={isButtonDisabled}>
+          Criar <PlusCircle size={15} />
+        </button>
+      </div>
+    </form>
   );
 };
 
