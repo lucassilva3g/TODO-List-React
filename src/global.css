@@ -1,0 +1,48 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  cursor: pointer;
+}
+
+span {
+  color: #131313;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + span:before {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #4EA8DE;
+  content: "";
+  display: inline-block;
+  margin: 0 16px 0 0;
+  padding: 0;
+  vertical-align: top;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked + span:before {
+  background: #5E60CE;
+  border: 2px solid #5E60CE;
+  box-shadow: inset 0px 0px 0px 1px ;
+  color: #5E60CE;
+  content: "";
+  text-align: center;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:focus + span::before {
+  outline: 0;
+}

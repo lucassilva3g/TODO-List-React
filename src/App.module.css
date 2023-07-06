@@ -7,27 +7,4 @@ body {
   background-color: #000000;
 }
 
-.tarefas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 120px;
-  padding-top: 50px;
-  justify-content: space-evenly;
-  padding-bottom: 50px;
-}
 
-.tarefa1, .tarefa2 {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.tarefa1 {
-  color: #4EA8DE;
-}
-
-.tarefa2 {
-  color: #8284FA;
-}
