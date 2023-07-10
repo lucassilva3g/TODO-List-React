@@ -9,7 +9,7 @@ const NoItem = () => {
       <p>
         <Clipboard size={40} />
       </p>
-      <p className={styles.noTasks}>Você ainda não tem tarefas cadastradas</p>
+      <p className={styles.NoTasks}>Você ainda não tem tarefas cadastradas</p>
       <p className={styles.create}>Crie tarefas e organize seus itens a fazer</p>
     </div>
     </>
