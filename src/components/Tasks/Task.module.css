@@ -1,4 +1,4 @@
-.tarefas {
+.tasks {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,17 +9,17 @@
   padding-bottom: 50px;
 }
 
-.tarefa1, .tarefa2 {
+.task1, .task2 {
   font-size: 20px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.tarefa1 {
+.task1 {
   color: #4EA8DE;
 }
 
-.tarefa2 {
+.task2 {
   color: #8284FA;
 }
 

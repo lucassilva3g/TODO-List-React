@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { PlusCircle } from "@phosphor-icons/react";
-import styles from "./Input.module.css";
+import styles from "./Form.module.css";
 
 interface InputProps {
   onCreatNewTask: () => void;
@@ -9,7 +9,7 @@ interface InputProps {
   isButtonDisabled: boolean;
 }
 
-const Input = ({
+const Form = ({
   onCreatNewTask,
   onInputChange,
   taskValue,
@@ -24,7 +24,7 @@ const Input = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className={styles.elem}>
+      <div className={styles.elements}>
         <input
           className={styles.addTask}
           type="text"
@@ -40,4 +40,4 @@ const Input = ({
   );
 };
 
-export { Input };
+export { Form };

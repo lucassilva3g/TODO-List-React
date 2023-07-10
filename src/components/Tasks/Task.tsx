@@ -25,12 +25,12 @@ const Tasks = ({ tasks, setTasks }: TasksProps) => {
 
   return (
     <>
-      <div className={styles.tarefas}>
-        <p className={styles.tarefa1}>
+      <div className={styles.tasks}>
+        <p className={styles.task1}>
           Tarefas criadas:{" "}
           <span className={styles.spanNum}>{tasks.length}</span>
         </p>
-        <p className={styles.tarefa2}>
+        <p className={styles.task2}>
           Tarefas concluídas:{" "}
           <span className={styles.spanNum}>
             {tasksDone > 0 ? `${tasksDone} de ${tasks.length}` : "0"}

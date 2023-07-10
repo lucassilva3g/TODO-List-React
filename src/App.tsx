@@ -1,5 +1,5 @@
 import { Logo } from "./components/Logo/Logo";
-import { Input } from "./components/Input/Input";
+import { Form } from "./components/Input/Form";
 import styles from "./App.module.css";
 import "./global.css";
 import { useState } from "react";
@@ -34,7 +34,7 @@ const App = () => {
     <div>
       <div className={styles.header}>
         <Logo />
-        <Input
+        <Form
           onCreatNewTask={handleCreateNewTask}
           onInputChange={handleInputChange}
           taskValue={newTask}
@@ -42,7 +42,7 @@ const App = () => {
         />
       </div>
       <Tasks tasks={tasks} setTasks={setTasks} />
-      
+
 
     </div>
   );
