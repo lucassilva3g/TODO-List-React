@@ -1,24 +1,20 @@
-import { ChangeEvent } from "react";
 import { PlusCircle } from "@phosphor-icons/react";
+import { useContext } from "react";
+import { TodoContext } from "../../Contexts/TodoContext";
 import styles from "./Form.module.css";
 
 interface InputProps {
-  onCreatNewTask: () => void;
-  onInputChange: (event: ChangeEvent<HTMLInputElement>) => void;
   taskValue: string;
   isButtonDisabled: boolean;
 }
 
-const Form = ({
-  onCreatNewTask,
-  onInputChange,
-  taskValue,
-  isButtonDisabled,
-}: InputProps) => {
+const Form = ({ taskValue, isButtonDisabled }: InputProps) => {
+  const { handleCreateNewTask, handleInputChange } = useContext(TodoContext);
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (taskValue.trim() !== "") {
-      onCreatNewTask();
+      handleCreateNewTask();
     }
   };
 
@@ -30,7 +26,7 @@ const Form = ({
           type="text"
           placeholder="Adicione uma nova tarefa"
           value={taskValue}
-          onChange={onInputChange}
+          onChange={handleInputChange}
         />
         <button className={styles.buttonCreate} disabled={isButtonDisabled}>
           Criar <PlusCircle size={15} />
