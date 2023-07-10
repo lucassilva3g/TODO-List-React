@@ -1,27 +1,18 @@
 import { Task } from "../../App";
 import { Item } from "../Item/Item";
 import { NoItem } from "../NoItem/NoItem";
+import { useContext } from "react";
+import { TodoContext } from "../../Contexts/TodoContext";
 import styles from "./Task.module.css";
 
 interface TasksProps {
   tasks: Task[];
-  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
-const Tasks = ({ tasks, setTasks }: TasksProps) => {
+const Tasks = ({ tasks }: TasksProps) => {
   const tasksDone = tasks.filter((task) => task.isComplete).length;
 
-  const handleDelete = (taskId: number) => {
-    setTasks(tasks.filter((taskItem) => taskItem.id !== taskId));
-  };
-
-  const handleDone = (taskId: number) => {
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === taskId ? { ...task, isComplete: !task.isComplete } : task
-      )
-    );
-  };
+  const { handleDone, handleDelete } = useContext(TodoContext);
 
   return (
     <>
