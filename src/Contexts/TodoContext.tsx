@@ -32,7 +32,6 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   const [tasks, setTasks] = useState<Task[]>(() => {
     const storageTasks = localStorage.getItem("@TodoApp:tasks");
     if (storageTasks) {
-      console.log(JSON.parse(storageTasks));
       return JSON.parse(storageTasks);
     }
     return [];
@@ -41,7 +40,6 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
   }, [tasks]);
-
 
   const [newTask, setNewTask] = useState("");
 
