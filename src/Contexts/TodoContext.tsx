@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { ReactNode } from "react";
 import { Task } from "../App";
 
@@ -29,11 +29,24 @@ export const TodoContext = createContext<TodoContextProps>({
 });
 
 export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(() => {
+    const storageTasks = localStorage.getItem("@TodoApp:tasks");
+    if (storageTasks) {
+      console.log(JSON.parse(storageTasks));
+      return JSON.parse(storageTasks);
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+
   const [newTask, setNewTask] = useState("");
 
   const addTask = (newTask: Task) => {
-    setTasks([...tasks, newTask]);
+    setTasks((oldTasks) => [...oldTasks, newTask]);
   };
 
   const toggleTaskCompletion = (taskId: number) => {
@@ -51,7 +64,7 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   };
 
   const handleCreateNewTask = () => {
-    const task = {
+    const task: Task = {
       id: Math.random(),
       name: newTask,
       isComplete: false,
@@ -60,6 +73,7 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
     setTasks(newTasks);
     setNewTask("");
   };
+
   const handleDone = (taskId: number) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>

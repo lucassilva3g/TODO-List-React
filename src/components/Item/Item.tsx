@@ -13,7 +13,12 @@ const Item = ({ todo, done, onDelete, onDone }: ItemProps) => {
     <div className={styles.item}>
       <div>
         <label>
-          <input type="checkbox" onClick={onDone} className={styles.checkbox} />
+          <input
+            checked={done}
+            type="checkbox"
+            onClick={onDone}
+            className={styles.checkbox}
+          />
           <span></span>
         </label>
       </div>
