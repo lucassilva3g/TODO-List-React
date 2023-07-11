@@ -1,6 +1,11 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { ReactNode } from "react";
-import { Task } from "../App";
+
+interface Task {
+  id: number;
+  name: string;
+  isComplete: boolean;
+}
 
 interface TodoContextProps {
   tasks: Task[];
@@ -32,8 +37,31 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
 
+  useEffect(() => {
+    const storageTasks = localStorage.getItem("@TodoApp:tasks");
+    if (storageTasks) {
+      setTasks(JSON.parse(storageTasks));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [tasks]);
+
   const addTask = (newTask: Task) => {
-    setTasks([...tasks, newTask]);
+    setTasks((oldTasks) => [...oldTasks, newTask]);
   };
 
   const toggleTaskCompletion = (taskId: number) => {
@@ -51,7 +79,7 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
   };
 
   const handleCreateNewTask = () => {
-    const task = {
+    const task: Task = {
       id: Math.random(),
       name: newTask,
       isComplete: false,
@@ -60,6 +88,7 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
     setTasks(newTasks);
     setNewTask("");
   };
+
   const handleDone = (taskId: number) => {
     setTasks((prevTasks) =>
       prevTasks.map((task) =>
