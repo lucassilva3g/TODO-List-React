@@ -40,7 +40,6 @@ const Tasks = ({ tasks }: TasksProps) => {
               todo={task.name}
               onDelete={() => handleDelete(task.id)}
               onDone={() => handleDone(task.id)}
-              id={task.id}
             />
           ))}
         </div>
