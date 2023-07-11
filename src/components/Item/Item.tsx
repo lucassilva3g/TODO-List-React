@@ -6,14 +6,15 @@ interface ItemProps {
   done: boolean;
   onDelete: () => void;
   onDone: () => void;
+  id: number;
 }
 
-const Item = ({ todo, done, onDelete, onDone }: ItemProps) => {
+const Item = ({ todo, done, onDelete, onDone, id }: ItemProps) => {
   return (
     <div className={styles.item}>
       <div>
         <label>
-          <input type="checkbox" onClick={onDone} className={styles.checkbox} />
+          <input value={id} type="checkbox" onClick={onDone} className={styles.checkbox} />
           <span></span>
         </label>
       </div>

@@ -1,11 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { ReactNode } from "react";
-
-interface Task {
-  id: number;
-  name: string;
-  isComplete: boolean;
-}
+import { Task } from "../App";
 
 interface TodoContextProps {
   tasks: Task[];
@@ -34,31 +29,21 @@ export const TodoContext = createContext<TodoContextProps>({
 });
 
 export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [newTask, setNewTask] = useState("");
-
-  useEffect(() => {
+  const [tasks, setTasks] = useState<Task[]>(() => {
     const storageTasks = localStorage.getItem("@TodoApp:tasks");
     if (storageTasks) {
-      setTasks(JSON.parse(storageTasks));
+      console.log(JSON.parse(storageTasks));
+      return JSON.parse(storageTasks);
     }
-  }, []);
+    return [];
+  });
 
   useEffect(() => {
     localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      localStorage.setItem("@TodoApp:tasks", JSON.stringify(tasks));
-    };
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [tasks]);
+  const [newTask, setNewTask] = useState("");
 
   const addTask = (newTask: Task) => {
     setTasks((oldTasks) => [...oldTasks, newTask]);
